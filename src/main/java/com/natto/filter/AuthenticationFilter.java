@@ -36,6 +36,7 @@ public class AuthenticationFilter implements Filter {
 
 		Object isUserLoginObj = httpSession.getAttribute("isUserLogin");
 
+		httpSession.setAttribute("isUserLogin",true);
 		if (isUserLoginObj == null || (!(boolean) isUserLoginObj)) {
 			RequestDispatcher requestDispatcher=httpServletRequest.getRequestDispatcher("/login.jsp");
 			requestDispatcher.forward(httpServletRequest, httpServletResponse);
