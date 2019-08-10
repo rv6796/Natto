@@ -21,6 +21,7 @@ public class UserDao {
 
 	}
 
+	
 	public User getUserPojoByEmailAddress(String emailaddress1) {
 		SessionFactory sessionFactory = UserUtil.getSessionFactory();
 		Session session = sessionFactory.openSession();
